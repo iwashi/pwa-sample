@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+<h1>Hello PWA</h1>
+
+<script>
+if ('serviceWorker' in navigator) {
+    // ページが完全に読み込まれたときに起動
+    window.addEventListener("load", async () => {
+        await navigator.serviceWorker.register('sw.js');
+    });
+}
+</script>
+</body>
+</html>
